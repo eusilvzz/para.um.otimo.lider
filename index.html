@@ -2,106 +2,147 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Carta para meu Líder</title>
 
-  <!-- Fonte manuscrita -->
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 
   <style>
     body {
       margin: 0;
-      padding: 20px;
+      padding: 40px 20px;
       display: flex;
       justify-content: center;
       align-items: center;
+      min-height: 100vh;
+      /* Fundo que lembra uma mesa de madeira ou superfície rústica */
+      background: #2c1e14;
+      background-image: radial-gradient(circle, #3d2b1f 0%, #1a110a 100%);
+      font-family: 'EB Garamond', serif;
+    }
 
-      background: #cbb994;
-      font-family: 'Georgia', serif;
+    .container-carta {
+      perspective: 1000px;
+      width: 100%;
+      max-width: 700px;
     }
 
     .carta {
-      max-width: 600px;
-      padding: 40px;
-
-      background: #fdf5e6;
-      border: 2px solid #c2a878;
-      border-radius: 10px;
-
-      box-shadow: 0 0 25px rgba(0,0,0,0.4);
-
+      background: #fdf5e6; /* Cor de papel envelhecido */
+      padding: 60px 50px;
       position: relative;
+      
+      /* Efeito de borda de papel e sombra realista */
+      box-shadow: 
+        0 1px 4px rgba(0,0,0,0.3), 
+        0 0 40px rgba(0,0,0,0.1) inset,
+        15px 15px 30px rgba(0,0,0,0.5);
+      
+      /* Leve inclinação para parecer uma folha jogada na mesa */
+      transform: rotate(-1deg);
+      border-radius: 2px;
     }
 
+    /* Textura de papel antigo sobreposta */
     .carta::before {
       content: "";
       position: absolute;
       inset: 0;
       background: url('https://www.transparenttextures.com/patterns/aged-paper.png');
-      opacity: 0.4;
+      opacity: 0.5;
       pointer-events: none;
+    }
+
+    /* Linhas sutis para parecer papel de carta */
+    .conteudo {
+      position: relative;
+      z-index: 1;
+      background-image: linear-gradient(transparent 95%, rgba(194, 168, 120, 0.2) 5%);
+      background-size: 100% 1.8em;
+      line-height: 1.8;
     }
 
     h1 {
       text-align: center;
-      margin-bottom: 25px;
+      margin-top: 0;
+      margin-bottom: 30px;
       font-family: 'Dancing Script', cursive;
-      font-size: 34px;
+      font-size: 38px;
+      color: #4a3728;
     }
 
     p {
-      line-height: 1.8;
-      margin-bottom: 18px;
-      font-size: 18px;
+      margin-bottom: 1.8em;
+      font-size: 20px;
+      color: #332b24;
       text-align: justify;
     }
 
     .assinatura {
       display: block;
-      margin-top: 30px;
+      margin-top: 50px;
       text-align: right;
       font-family: 'Dancing Script', cursive;
-      font-size: 22px;
+      font-size: 26px;
+      color: #4a3728;
+    }
+
+    /* Detalhe de "dobra" no canto para parecer papel real */
+    .carta::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 40px 40px 0;
+      border-color: transparent transparent rgba(0,0,0,0.05) transparent;
+    }
+
+    @media (max-width: 480px) {
+      .carta {
+        padding: 30px 25px;
+      }
+      h1 { font-size: 28px; }
+      p { font-size: 18px; }
     }
   </style>
 </head>
 
 <body>
 
-  <div class="carta">
-    <h1>Para o melhor líder 🙏</h1>
+  <div class="container-carta">
+    <article class="carta">
+      <div class="conteudo">
+        <h1>Para o melhor líder 🙏</h1>
 
-    <p>
-      Líder, queria começar dizendo o quanto sou grato a você. Mesmo sem termos tanta convivência no dia a dia ou conversas frequentes, o impacto que você teve na minha vida foi enorme. Desde que entrei na célula, você sempre foi alguém que me acolheu, me tratou bem e, principalmente, me ensinou muito. Através de você, muitas coisas começaram a fazer mais sentido pra mim, e isso fez toda a diferença na minha caminhada.
-    </p>
+        <p>
+          Líder, queria começar dizendo o quanto sou grato a você. Mesmo sem termos tanta convivência no dia a dia ou conversas frequentes, o impacto que você teve na minha vida foi enorme. Desde que entrei na célula, você sempre foi alguém que me acolheu, me tratou bem e, principalmente, me ensinou muito. Através de você, muitas coisas começaram a fazer mais sentido pra mim, e isso fez toda a diferença na minha caminhada.
+        </p>
 
-    <p>
-      Uma das coisas que mais admiro em você é a forma como você prega. Existe algo especial no seu jeito de transmitir as mensagens, é claro, é verdadeiro e chega de um jeito diferente. Muitas vezes, eu chegava na célula com dúvidas ou sem entender certas coisas, e saía com a mente mais aberta, com tudo fazendo mais sentido. Às vezes eu entrava pensando de um jeito e saía pensando completamente diferente, e isso marcou muito o meu crescimento. Você não apenas fala, você realmente ensina, e ensina de uma forma admirável.
-    </p>
+        <p>
+          Uma das coisas que mais admiro em você é a forma como você prega. Existe algo especial no seu jeito de transmitir as mensagens, é claro, é verdadeiro e chega de um jeito diferente. Muitas vezes, eu chegava na célula com dúvidas ou sem entender certas coisas, e saía com a mente mais aberta, com tudo fazendo mais sentido.
+        </p>
 
-    <p>
-      Quero te agradecer por tudo: por cada ensinamento, por cada palavra, por cada oração e por todo o esforço que você colocou para ser esse líder que você é. Dá pra ver que é algo feito com amor, responsabilidade e propósito, e isso impacta mais do que você imagina.
-    </p>
+        <p>
+          Quero te agradecer por tudo: por cada ensinamento, por cada palavra e por todo o esforço que você colocou para ser esse líder que você é. Dá pra ver que é algo feito com amor, responsabilidade e propósito.
+        </p>
 
-    <p>
-      Também não posso deixar de dizer que fico triste com a sua saída da célula. Sua presença vai fazer muita falta. Mas, acima disso, fica uma gratidão enorme por tudo o que você fez e representou nesse tempo. Eu tenho certeza de que, assim como você marcou a minha vida, você vai marcar a vida de muitas outras pessoas nessa nova fase, mostrando o amor de Cristo da mesma forma que mostrou pra mim.
-    </p>
+        <p>
+          Também não posso deixar de dizer que fico triste com a sua saída da célula. Sua presença vai fazer muita falta. Mas, acima disso, fica uma gratidão enorme. Eu tenho certeza de que você vai marcar a vida de muitas outras pessoas nessa nova fase.
+        </p>
 
-    <p>
-      Eu te admiro muito, de verdade, e levo comigo tudo o que aprendi com você.
-    </p>
+        <p>
+          Muito obrigado, líder!
+        </p>
 
-    <p>
-      Eu não tive muito tempo para poder deixar esse site melhor, mas saiba que foi com toda a gratidão por todos os ensinamentos que me passou, por todas as mensagens e orações.
-    </p>
-
-    <p>
-      Muito obrigado, líder!
-    </p>
-
-    <span class="assinatura">
-      Com carinho,<br>
-      Seu liderado 💙
-    </span>
+        <span class="assinatura">
+          Com carinho,<br>
+          Seu liderado 💙
+        </span>
+      </div>
+    </article>
   </div>
 
 </body>
